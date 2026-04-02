@@ -1,4 +1,4 @@
-# 📡 Telco Customer Churn Prediction: A Production-Grade MLOps Ecosystem
+# 📡 Telco Customer Churn Prediction
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
