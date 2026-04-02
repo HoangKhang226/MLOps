@@ -1,0 +1,46 @@
+Metadata-Version: 2.4
+Name: mlProject
+Version: 0.0.0
+Summary: A small python package for ml app
+Home-page: https://github.com/HoangKhang226/End-to-end-ML-Project-with-MLflow
+Author: HoangKhang226
+Author-email: khangrubikcuber@gmail.com
+Project-URL: Bug Tracker, https://github.com/HoangKhang226/End-to-end-ML-Project-with-MLflow/issues
+Description-Content-Type: text/markdown
+Dynamic: author
+Dynamic: author-email
+Dynamic: description
+Dynamic: description-content-type
+Dynamic: home-page
+Dynamic: project-url
+Dynamic: summary
+
+# MLOP
+MLOP/
+├── config/                 # QUAN TRỌNG: Chứa cấu hình dự án
+│   └── config.yaml         # Đường dẫn data, tham số model, v.v.
+├── data/                   # Quản lý dữ liệu (Dùng DVC để track)
+│   ├── raw/                # Dữ liệu gốc (Không sửa)
+│   └── processed/          # Dữ liệu đã sạch (Dùng để train)
+├── research/               # Thay cho thư mục notebooks/
+│   ├── 01_data_ingestion.ipynb
+│   └── 02_eda_model.ipynb
+├── src/                    # Mã nguồn chính (Source code)
+│   ├── mlProject/          # Package chính của dự án
+│   │   ├── __init__.py
+│   │   ├── components/     # Các bước rời rạc (Ingestion, Trainer, ...)
+│   │   ├── pipeline/       # Kết nối các bước thành luồng chạy
+│   │   ├── entity/         # Định nghĩa kiểu dữ liệu (Data Class)
+│   │   ├── constants/      # Các biến hằng số (Đường dẫn config)
+│   │   ├── utils/          # Hàm dùng chung (Lưu/mở file)
+│   │   ├── logger.py       # Cấu hình Ghi nhật ký (Log)
+├── tests/                  # Kiểm thử code (Unit test)
+├── artifacts/              # Tự động sinh ra khi chạy (Model, Scaler, ...)
+├── logs/                   # Chứa các file .log theo ngày giờ
+├── .dockerignore           # Loại bỏ file rác khi đóng gói Docker
+├── .gitignore              # Chặn venv, data nặng, secrets lên Git
+├── Dockerfile              # Đóng gói ứng dụng thành Image
+├── app.py                  # API chính (FastAPI)
+├── main.py                 # File chạy chính cho toàn bộ quy trình
+├── requirements.txt        # Danh sách thư viện cần cài
+└── setup.py                # Cài đặt project như một thư viện nội bộ

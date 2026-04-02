@@ -1,0 +1,72 @@
+
+🔹 Column: MultipleLines
+MultipleLines
+No                  3390
+Yes                 2971
+No phone service     682
+Name: count, dtype: int64
+----------------------------------------
+
+🔹 Column: InternetService
+InternetService
+Fiber optic    3096
+DSL            2421
+No             1526
+Name: count, dtype: int64
+----------------------------------------
+
+🔹 Column: OnlineSecurity
+OnlineSecurity
+No                     3498
+Yes                    2019
+No internet service    1526
+Name: count, dtype: int64
+----------------------------------------
+
+🔹 Column: OnlineBackup
+OnlineBackup
+No                     3088
+Yes                    2429
+No internet service    1526
+Name: count, dtype: int64
+----------------------------------------
+
+🔹 Column: DeviceProtection
+DeviceProtection
+No                     3095
+Yes                    2422
+No internet service    1526
+Name: count, dtype: int64
+----------------------------------------
+
+🔹 Column: TechSupport
+TechSupport
+No                     3473
+Yes                    2044
+No internet service    1526
+Name: count, dtype: int64
+----------------------------------------
+
+🔹 Column: StreamingTV
+StreamingTV
+No                     2810
+Yes                    2707
+No internet service    1526
+Name: count, dtype: int64
+----------------------------------------
+
+🔹 Column: StreamingMovies
+StreamingMovies
+No                     2785
+Yes                    2732
+No internet service    1526
+Name: count, dtype: int64
+----------------------------------------
+
+🔹 Column: Contract
+Contract
+Month-to-month    3875
+Two year          1695
+One year          1473
+Name: count, dtype: int64
+----------------------------------------

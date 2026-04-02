@@ -1,0 +1,1 @@
+from src.mlProject.entity.config_entity import DataIngestionConfig

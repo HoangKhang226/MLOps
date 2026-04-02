@@ -1,0 +1,18 @@
+pandas
+numpy
+seaborn
+matplotlib
+pyyaml
+python-box
+ensure
+joblib
+fastapi
+uvicorn
+streamlit
+httpx
+scikit-learn
+mlflow
+xgboost
+dagshub
+imbalanced-learn
+-e .
