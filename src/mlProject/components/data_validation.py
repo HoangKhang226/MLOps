@@ -3,6 +3,7 @@ import pandas as pd
 from src.mlProject import logger
 from src.mlProject.entity.config_entity import DataValidationConfig
 
+
 class DataValidation:
     def __init__(self, config: DataValidationConfig):
         self.config = config
@@ -20,7 +21,7 @@ class DataValidation:
                 if col not in all_schema:
                     validation_status = False
                     break
-                
+
             return validation_status
 
         except Exception as e:

@@ -22,7 +22,9 @@ if __name__ == "__main__":
         logger.info(f">>>>>> STAGE 05: MODEL EVALUATION started <<<<<<")
         obj = ModelEvaluationTrainingPipeline()
         obj.main()
-        logger.info(f">>>>>> STAGE 05: MODEL EVALUATION completed <<<<<<\n\nx==========x")
+        logger.info(
+            f">>>>>> STAGE 05: MODEL EVALUATION completed <<<<<<\n\nx==========x"
+        )
     except Exception as e:
         logger.exception(e)
         raise e

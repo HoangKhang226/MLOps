@@ -5,6 +5,7 @@ import os
 
 STAGE_NAME = "Serving & UI Stage"
 
+
 class PredictionServicePipeline:
     def __init__(self):
         pass
@@ -18,7 +19,9 @@ class PredictionServicePipeline:
             logger.info("Initializing Stage 06: Prediction Service...")
             # Check if artifacts exist
             if not os.path.exists("artifacts/model_trainer/model.joblib"):
-                logger.error("Model not found in artifacts! Run Model Trainer (Stage 04) first.")
+                logger.error(
+                    "Model not found in artifacts! Run Model Trainer (Stage 04) first."
+                )
                 return
 
             logger.info("Serving & Prediction components are READY.")
@@ -29,7 +32,8 @@ class PredictionServicePipeline:
             logger.exception(f"Error in Stage 06: {e}")
             raise e
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     try:
         logger.info(f">>>>>> stage {STAGE_NAME} started <<<<<<")
         obj = PredictionServicePipeline()

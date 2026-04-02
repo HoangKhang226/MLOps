@@ -1,17 +1,21 @@
 from src.mlProject.constants import *
 from src.mlProject.utils.common import read_yaml, create_directories
-from src.mlProject.entity.config_entity import (DataIngestionConfig,
-                                             DataValidationConfig,
-                                             DataTransformationConfig,
-                                             ModelTrainerConfig,
-                                             ModelEvaluationConfig)
+from src.mlProject.entity.config_entity import (
+    DataIngestionConfig,
+    DataValidationConfig,
+    DataTransformationConfig,
+    ModelTrainerConfig,
+    ModelEvaluationConfig,
+)
+
 
 class ConfigurationManager:
     def __init__(
         self,
-        config_filepath = CONFIG_FILE_PATH,
-        params_filepath = PARAMS_FILE_PATH,
-        schema_filepath = SCHEMA_FILE_PATH):
+        config_filepath=CONFIG_FILE_PATH,
+        params_filepath=PARAMS_FILE_PATH,
+        schema_filepath=SCHEMA_FILE_PATH,
+    ):
 
         self.config = read_yaml(config_filepath)
         self.params = read_yaml(params_filepath)
@@ -29,12 +33,10 @@ class ConfigurationManager:
             source_URL=config.source_URL,
             local_data_file=config.local_data_file,
             unzip_dir=config.unzip_dir,
-            raw_data_dir=config.raw_data_dir
+            raw_data_dir=config.raw_data_dir,
         )
 
         return data_ingestion_config
-
-
 
     def get_data_validation_config(self) -> DataValidationConfig:
         config = self.config.data_validation
@@ -45,12 +47,11 @@ class ConfigurationManager:
         data_validation_config = DataValidationConfig(
             root_dir=config.root_dir,
             STATUS_FILE=config.STATUS_FILE,
-            unzipped_data_dir = config.unzipped_data_dir,
+            unzipped_data_dir=config.unzipped_data_dir,
             all_schema=schema,
         )
 
         return data_validation_config
-
 
     def get_data_transformation_config(self) -> DataTransformationConfig:
         config = self.config.data_transformation
@@ -62,11 +63,10 @@ class ConfigurationManager:
             data_path=Path(config.data_path),
             processed_dir=Path(config.processed_dir),
             test_size=config.test_size,
-            oversampling=config.oversampling
+            oversampling=config.oversampling,
         )
 
         return data_transformation_config
-
 
     def get_model_trainer_config(self) -> ModelTrainerConfig:
         config = self.config.model_trainer
@@ -83,11 +83,10 @@ class ConfigurationManager:
             rf_params=params.RandomForest,
             xgboost_params=params.XGBoost,
             target_column=schema.name,
-            mlflow_uri=config.mlflow_uri
+            mlflow_uri=config.mlflow_uri,
         )
 
         return model_trainer_config
-
 
     def get_model_evaluation_config(self) -> ModelEvaluationConfig:
         config = self.config.model_evaluation
@@ -103,7 +102,7 @@ class ConfigurationManager:
             all_params=params,
             metric_file_name=Path(config.metric_file_name),
             target_column=schema.name,
-            mlflow_uri=config.mlflow_uri
+            mlflow_uri=config.mlflow_uri,
         )
 
         return model_evaluation_config

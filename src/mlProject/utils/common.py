@@ -4,8 +4,10 @@ import yaml
 from src.mlProject.logger import logger
 import json
 import joblib
-from ensure import ensure_annotations # library to ensure that the function is called with the correct arguments
-from box import ConfigBox # library to convert yaml file to class attributes
+from ensure import (
+    ensure_annotations,
+)  # library to ensure that the function is called with the correct arguments
+from box import ConfigBox  # library to convert yaml file to class attributes
 from pathlib import Path
 from typing import Any
 

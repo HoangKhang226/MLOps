@@ -14,7 +14,7 @@ class DataValidationTrainingPipeline:
         data_validation.validate_all_columns()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     try:
         logger.info(f">>>>>> stage Data Validation started <<<<<<")
         obj = DataValidationTrainingPipeline()
